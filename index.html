@@ -1,971 +1,1492 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <link rel="stylesheet" href="style.css">
-<style>
-*{
-  padding: 0;
-  margin:0;
-  box-sizing: border-box;
-}
-.logo{
-  font-size:3rem;
-  border-right: 1px solid black;
-  padding: 20px;
-  margin: 10px 20px;
-}
-.sub-text{
-  font-weight: bold;
-}
-.low-text{
-  font-size: 0.8rem;
-}
-.row-1{
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  text-align: left;
 
-}
-.table{
-  margin: 10px;
-}
-.capt{
-  text-align: center;
-  font-size: 1.5rem;
-}
-.vertical{
-  writing-mode: vertical-lr;
-}
-.row-1-tables{
-  width: 100%;
-  justify-content: center;
-  display: flex;
-
-}
-table{
-border-collapse:collapse;
-}
-table, th, td {
-  border:1px solid black;
-  text-align: center;
-}
-</style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        
+        #name {
+            font-size: 4rem;
+            text-align: center;
+        }
+        
+        body {
+            height: 500vh;
+        }
+        
+        .img-cont {
+            width: 170px;
+            height: auto;
+            border-right: 2px solid black;
+            margin: 10px 15px;
+        }
+        
+        #ccs {
+            font-size: 3.8rem;
+            font-family: 'Black Han Sans', sans-serif;
+            margin-top: 10px;
+        }
+        
+        .logo {
+            width: 100%;
+            height: 130px;
+        }
+        
+        .sub-text {
+            font-weight: bold;
+            font-size: 2rem;
+        }
+        
+        .sub {
+            font-weight: bold;
+        }
+        
+        .low-text {
+            font-size: 1.3rem;
+        }
+        
+        .row-1 {
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        
+        .table {
+            margin: 10px 10px;
+            width: 100%;
+        }
+        
+        .capt {
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        
+        .vertical {
+            writing-mode: vertical-lr;
+        }
+        
+        .total {
+            margin-left: 260px;
+        }
+        
+        .row-1-tables {
+            width: 100%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+        
+        .last-row {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        
+        .last {
+            width: 100%;
+            margin: 10px;
+        }
+        
+        .last-table {
+            width: 100%;
+            border: 2px solid black;
+            margin: 10px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .long {
+            font-size: 0.8rem;
+        }
+        
+        .left {
+            text-align: left;
+            border: none;
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            text-align: center;
+        }
+        
+        table {
+            border: 2px solid black;
+        }
+        /*NAME FILL UP*/
+        
+        .row-1-fill,
+        .row-2-fill {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            font-size: 1.4rem;
+        }
+        
+        .name-section {
+            margin: 19px 15px;
+        }
+        /*Totals*/
+        
+        .total-1 {
+            margin-right: 220px;
+        }
+        
+        .total-2 {
+            margin-right: 220px;
+        }
+        
+        .total-3,
+        .total-4 {
+            margin-right: 230px;
+        }
+        
+        .total-5,
+        .total-6 {
+            margin-right: 190px;
+        }
+        
+        .total-7 {
+            margin-right: 220px;
+        }
+        
+        .total-8 {
+            margin-right: 160px;
+        }
+        
+        .total-9 {
+            margin-right: 110px;
+        }
+        /*Italic*/
+        
+        .italic {
+            font-style: italic;
+        }
+        
+        #check {
+            width: 10px;
+            height: 10px;
+            margin: 0 3px;
+        }
+        /*Colors*/
+        
+        .green {
+            color: #38E54D;
+        }
+        
+        .red {
+            color: red;
+        }
+        
+        .blue {
+            color: blue;
+        }
+        /*First year*/
+        
+        .first {
+            background-color: #61764B;
+            margin: 0 10px;
+            color: white;
+        }
+        
+        .green-one {
+            background-color: #B6E388;
+            color: white;
+        }
+        
+        .green-two {
+            background-color: #E1FFB1;
+        }
+        
+        .green-three {
+            background-color: #F7F7F7;
+        }
+        /*Second Year*/
+        
+        .second {
+            background-color: #C55300;
+            margin: 0 10px;
+            color: white;
+        }
+        
+        .orange-one {
+            background-color: #FEB139;
+        }
+        
+        .orange-two {
+            background-color: #FF7700;
+            color: white;
+        }
+        
+        .orange-three {
+            background-color: #FAD9A1;
+        }
+        /*Third Year*/
+        
+        .third {
+            background-color: #472D2D;
+            margin: 0 10px;
+            color: white;
+        }
+        
+        .violet-one {
+            background-color: #9E7676;
+        }
+        
+        .violet-two {
+            background-color: #815B5B;
+            color: white;
+        }
+        
+        .violet-three {
+            background-color: #EDE4E0;
+        }
+        /*Summer*/
+        
+        .text {
+            width: 100%;
+        }
+        
+        .single-row {
+            width: 100%;
+        }
+        
+        .capt-summer {
+            font-size: 1.4rem;
+            margin: 0 10px;
+            background-color: #73777B;
+            width: 49%;
+            text-align: center;
+            color: white;
+        }
+        
+        .grey-one {
+            background-color: #E0DECA;
+        }
+        
+        .grey-two {
+            background-color: #73777B;
+            color: white;
+        }
+        
+        .grey-three {
+            background-color: #E0DECA;
+        }
+        /*Fourth Year*/
+        
+        .fourth {
+            background-color: #25316D;
+            margin: 0 10px;
+            color: white;
+        }
+        
+        .blue-one {
+            background-color: #256D85;
+            color: white;
+        }
+        
+        .blue-two {
+            background-color: #AFB4FF;
+        }
+        
+        .blue-three {
+            background-color: #EEF1FF;
+        }
+        
+        .circles {
+            display: flex;
+            align-items: center;
+        }
+        
+        .circle {
+            height: 10px;
+            width: 10px;
+            background-color: green;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+        
+        .circle-one {
+            display: inline-block;
+        }
+        
+        .circle2 {
+            position: relative;
+            left: -60px;
+        }
+        /*Last part*/
+        
+        .grey {
+            background-color: #EEEEEE;
+        }
+        
+        .name {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="row-1">
-  <div class="logo-cont">
-        <p class="logo">UC</p>
-  </div>
-  <div class="row2">
-     <h1 class="ccs">College of Computer Studies(CCS)</h1>
-     <p class="sub-text">Bachelor of Science in Information Technology (BSIT)</p>
-     <p class="low-text">Effective School Year 2020-2021 / Based on CMO No. 25 series of 2015</p>
-  </div>
+    <div class="row-1">
+        <div class="logo-cont">
+            <div class="img-cont">
+                <img src="./imgs/img1.jpg" alt="UC LOGO" width="100px" height="100px" class="logo">
+            </div>
+        </div>
+        <div class="row2">
+            <h1 id="ccs">College of Computer Studies(CCS)</h1>
+            <p class="sub-text">Bachelor of Science in Information Technology (BSIT)</p>
+            <p class="low-text italic">Effective School Year 2020-2021 / Based on <span class="sub">CMO No. 25 series of 2015</span> </p>
+        </div>
 
-  
-</div>
-<p class="capt">First Year</p>
-<div class="row-1-tables">
-  
-  <div class="table-1 table">
-   
-    <table>
-    
-      <tr>
-        <th rowspan="2">1</th>
-        <th class="vertical" rowspan="2">Grade</th>
-        <th rowspan="2">Course Code</th>
-        <th rowspan="2" >Descriptive Title</th>     
-        <th colspan="3">Units</th>
-        <th rowspan="2">Pre-Requisite</th>
-      </tr>
-      <tr>
-        <td>lec</td>
-        <td>lab</td>
-        <td>total </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> ENGL 100 </td>
-        <td> Communication Arts</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
 
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>ST 101</td>
-        <td> Living in the IT Era</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> MATH 100 </td>
-        <td> College Mathematics</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> PSYCH 101 </td>
-        <td> CUnderstanding the Self</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-     
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> PCC-INTCOM11</td>
-        <td> 1 Introduction to Computing</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> CC-COMPROG11</td>
-        <td>Computer Programming 1</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>IT-WEBDEV11</td>
-        <td> 1 Introduction to Computing</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>PE 101</td>
-        <td> Movement Enhancement</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>NSTP 101</td>
-        <td> Nat'l Service Training Program 1</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-    </table>
-  </div>
+    </div>
+    <div class="name-section">
+        <div class="row-1-fill">
+            <p class="fill-up">Student's ID number:____________________________</p>
+            <p class="fill-up">Date Started / First enrolled:____________________________</p>
+        </div>
+        <div class="row-2-fill">
+            <p class="fill-up">Student's Full Name::____________________________</p>
+            <p class="fill-up">Expected Date of Graduation:____________________________</p>
+        </div>
+    </div>
 
-  <div class="table-2 table">
-   
-    <table>
-    
-      <tr>
-        <th rowspan="2">1</th>
-        <th class="vertical" rowspan="2">Grade</th>
-        <th rowspan="2">Course Code</th>
-        <th rowspan="2" >Descriptive Title</th>     
-        <th colspan="3">Units</th>
-        <th rowspan="2">Pre-Requisite</th>
-      </tr>
-      <tr>
-        <td>lec</td>
-        <td>lab</td>
-        <td>total </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> ENGL 100 </td>
-        <td> Communication Arts</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
+    <p class="capt first">I-First Year</p>
+    <div class="row-1-tables">
 
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>ST 101</td>
-        <td> Living in the IT Era</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> MATH 100 </td>
-        <td> College Mathematics</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> PSYCH 101 </td>
-        <td> CUnderstanding the Self</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-     
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> PCC-INTCOM11</td>
-        <td> 1 Introduction to Computing</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> CC-COMPROG11</td>
-        <td>Computer Programming 1</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>IT-WEBDEV11</td>
-        <td> 1 Introduction to Computing</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>PE 101</td>
-        <td> Movement Enhancement</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>NSTP 101</td>
-        <td> Nat'l Service Training Program 1</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-    </table>
-  </div>
-</div>
-<p class="capt">Second Year</p>
-<div class="row-1-tables">
-  
-  <div class="table-1 table">
-   
-    <table>
-    
-      <tr>
-        <th rowspan="2">1</th>
-        <th class="vertical" rowspan="2">Grade</th>
-        <th rowspan="2">Course Code</th>
-        <th rowspan="2" >Descriptive Title</th>     
-        <th colspan="3">Units</th>
-        <th rowspan="2">Pre-Requisite</th>
-      </tr>
-      <tr>
-        <td>lec</td>
-        <td>lab</td>
-        <td>total </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> ENGL 100 </td>
-        <td> Communication Arts</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
+        <div class="table-1 table">
 
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>ST 101</td>
-        <td> Living in the IT Era</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> MATH 100 </td>
-        <td> College Mathematics</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> PSYCH 101 </td>
-        <td> CUnderstanding the Self</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-     
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> PCC-INTCOM11</td>
-        <td> 1 Introduction to Computing</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> CC-COMPROG11</td>
-        <td>Computer Programming 1</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>IT-WEBDEV11</td>
-        <td> 1 Introduction to Computing</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>PE 101</td>
-        <td> Movement Enhancement</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>NSTP 101</td>
-        <td> Nat'l Service Training Program 1</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-    </table>
-  </div>
+            <table>
 
-  <div class="table-2 table">
-   
-    <table>
-    
-      <tr>
-        <th rowspan="2">1</th>
-        <th class="vertical" rowspan="2">Grade</th>
-        <th rowspan="2">Course Code</th>
-        <th rowspan="2" >Descriptive Title</th>     
-        <th colspan="3">Units</th>
-        <th rowspan="2">Pre-Requisite</th>
-      </tr>
-      <tr>
-        <td>lec</td>
-        <td>lab</td>
-        <td>total </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> ENGL 100 </td>
-        <td> Communication Arts</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
+                <tr class="green-three">
+                    <th rowspan="2" class="green-one">1</th>
+                    <th class="vertical" rowspan="2">Grade</th>
+                    <th rowspan="2">Course Code</th>
+                    <th rowspan="2">Descriptive Title</th>
+                    <th colspan="3">Units</th>
+                    <th rowspan="2">Pre-Requisite/Remarks</th>
+                </tr>
+                <tr>
+                    <td>lec</td>
+                    <td>lab</td>
+                    <td>total </td>
 
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>ST 101</td>
-        <td> Living in the IT Era</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> MATH 100 </td>
-        <td> College Mathematics</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> PSYCH 101 </td>
-        <td> CUnderstanding the Self</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-     
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> PCC-INTCOM11</td>
-        <td> 1 Introduction to Computing</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> CC-COMPROG11</td>
-        <td>Computer Programming 1</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>IT-WEBDEV11</td>
-        <td> 1 Introduction to Computing</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>PE 101</td>
-        <td> Movement Enhancement</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>NSTP 101</td>
-        <td> Nat'l Service Training Program 1</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-    </table>
-  </div>
-</div>
-<p class="capt">Third Year</p>
-<div class="row-1-tables">
-  
-  <div class="table-1 table">
-   
-    <table>
-    
-      <tr>
-        <th rowspan="2">1</th>
-        <th class="vertical" rowspan="2">Grade</th>
-        <th rowspan="2">Course Code</th>
-        <th rowspan="2" >Descriptive Title</th>     
-        <th colspan="3">Units</th>
-        <th rowspan="2">Pre-Requisite</th>
-      </tr>
-      <tr>
-        <td>lec</td>
-        <td>lab</td>
-        <td>total </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> ENGL 100 </td>
-        <td> Communication Arts</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
+                </tr>
+                <tr>
+                    <td rowspan="10" class="vertical green-two">1st Semester </td>
+                    <td></td>
 
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>ST 101</td>
-        <td> Living in the IT Era</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> MATH 100 </td>
-        <td> College Mathematics</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> PSYCH 101 </td>
-        <td> CUnderstanding the Self</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-     
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> PCC-INTCOM11</td>
-        <td> 1 Introduction to Computing</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> CC-COMPROG11</td>
-        <td>Computer Programming 1</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>IT-WEBDEV11</td>
-        <td> 1 Introduction to Computing</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>PE 101</td>
-        <td> Movement Enhancement</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>NSTP 101</td>
-        <td> Nat'l Service Training Program 1</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-    </table>
-  </div>
+                    <td> ENGL 100 </td>
+                    <td class="green"> Communication Arts</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td></td>
 
-  <div class="table-2 table">
-   
-    <table>
-    
-      <tr>
-        <th rowspan="2">1</th>
-        <th class="vertical" rowspan="2">Grade</th>
-        <th rowspan="2">Course Code</th>
-        <th rowspan="2" >Descriptive Title</th>     
-        <th colspan="3">Units</th>
-        <th rowspan="2">Pre-Requisite</th>
-      </tr>
-      <tr>
-        <td>lec</td>
-        <td>lab</td>
-        <td>total </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> ENGL 100 </td>
-        <td> Communication Arts</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
+                </tr>
+                <tr>
+                    <td> </td>
 
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>ST 101</td>
-        <td> Living in the IT Era</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> MATH 100 </td>
-        <td> College Mathematics</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> PSYCH 101 </td>
-        <td> CUnderstanding the Self</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-     
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> PCC-INTCOM11</td>
-        <td> 1 Introduction to Computing</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> CC-COMPROG11</td>
-        <td>Computer Programming 1</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>IT-WEBDEV11</td>
-        <td> 1 Introduction to Computing</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>PE 101</td>
-        <td> Movement Enhancement</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>NSTP 101</td>
-        <td> Nat'l Service Training Program 1</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-    </table>
-    
-  </div>
-</div>
-<p class="capt">Fourth Year</p>
-<div class="row-1-tables">
-  
-  <div class="table-1 table">
-   
-    <table>
-    
-      <tr>
-        <th rowspan="2">1</th>
-        <th class="vertical" rowspan="2">Grade</th>
-        <th rowspan="2">Course Code</th>
-        <th rowspan="2" >Descriptive Title</th>     
-        <th colspan="3">Units</th>
-        <th rowspan="2">Pre-Requisite</th>
-      </tr>
-      <tr>
-        <td>lec</td>
-        <td>lab</td>
-        <td>total </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> ENGL 100 </td>
-        <td> Communication Arts</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
+                    <td>ST 101</td>
+                    <td class="green"> Living in the IT Era</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
 
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>ST 101</td>
-        <td> Living in the IT Era</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> MATH 100 </td>
-        <td> College Mathematics</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> PSYCH 101 </td>
-        <td> CUnderstanding the Self</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-     
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> PCC-INTCOM11</td>
-        <td> 1 Introduction to Computing</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> CC-COMPROG11</td>
-        <td>Computer Programming 1</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>IT-WEBDEV11</td>
-        <td> 1 Introduction to Computing</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>PE 101</td>
-        <td> Movement Enhancement</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>NSTP 101</td>
-        <td> Nat'l Service Training Program 1</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-    </table>
-  </div>
+                    <td> MATH 100 </td>
+                    <td class="green"> College Mathematics</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td> </td>
 
-  <div class="table-2 table">
-   
-    <table>
-    
-      <tr>
-        <th rowspan="2">1</th>
-        <th class="vertical" rowspan="2">Grade</th>
-        <th rowspan="2">Course Code</th>
-        <th rowspan="2" >Descriptive Title</th>     
-        <th colspan="3">Units</th>
-        <th rowspan="2">Pre-Requisite</th>
-      </tr>
-      <tr>
-        <td>lec</td>
-        <td>lab</td>
-        <td>total </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> ENGL 100 </td>
-        <td> Communication Arts</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
+                    <td> PSYCH 101 </td>
+                    <td class="green"> Understanding the Self</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td> </td>
+                </tr>
 
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>ST 101</td>
-        <td> Living in the IT Era</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> MATH 100 </td>
-        <td> College Mathematics</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> PSYCH 101 </td>
-        <td> CUnderstanding the Self</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-     
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> PCC-INTCOM11</td>
-        <td> 1 Introduction to Computing</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> CC-COMPROG11</td>
-        <td>Computer Programming 1</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>IT-WEBDEV11</td>
-        <td> 1 Introduction to Computing</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>PE 101</td>
-        <td> Movement Enhancement</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td>NSTP 101</td>
-        <td> Nat'l Service Training Program 1</td>
-        <td>3</td> 
-        <td> </td>
-        <td>3</td>
-        <td> </td>
-      </tr>
-    </table>
-    
-  </div>
+                <tr>
+                    <td> </td>
+
+                    <td> PCC-INTCOM11</td>
+                    <td class="red"> 1 Introduction to Computing</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td> CC-COMPROG11</td>
+                    <td class="red">Computer Programming 1</td>
+                    <td>2</td>
+                    <td> 1</td>
+                    <td>3</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>IT-WEBDEV11</td>
+                    <td class="blue"> Web Design & Development</td>
+                    <td>2</td>
+                    <td> 1</td>
+                    <td>3</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>PE 101</td>
+                    <td> Movement Enhancement</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>NSTP 101</td>
+                    <td> Nat'l Service Training Program 1</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td colspan="9" class="green-three">Total <span class="total-1"></span> 26</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="table-2 table">
+
+            <table>
+
+                <tr class="green-three">
+                    <th rowspan="2" class="green-one">2</th>
+                    <th class="vertical" rowspan="2">Grade</th>
+                    <th rowspan="2">Course Code</th>
+                    <th rowspan="2">Descriptive Title</th>
+                    <th colspan="3">Units</th>
+                    <th rowspan="2">Pre-Requisite/Remarks</th>
+                </tr>
+                <tr>
+                    <td>lec</td>
+                    <td>lab</td>
+                    <td>total </td>
+
+                </tr>
+                <tr>
+                    <td rowspan="10" class="vertical green-two">2nd Semester </td>
+                    <td></td>
+
+                    <td> ENGL 101 </td>
+                    <td class="green">Purposive Communication</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td class="italic">ENGL 100</td>
+
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>ENTREP 101</td>
+                    <td class="green"> The Entrepreneurial Mind</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td> MATH 101 </td>
+                    <td class="green"> Mathematics in the Modern World</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td>MATH 100</td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td> HIST 101 </td>
+                    <td class="green"> Readings in Philippine History</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>HUM 101</td>
+                    <td class="green"> Art Appreciation</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>CC-COMPROG12</td>
+                    <td class="red"> Computer Programming 2</td>
+                    <td>2</td>
+                    <td> 1</td>
+                    <td>3</td>
+                    <td class="italic"> CC-COMPROG11</td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td> CC-DISCRET12</td>
+                    <td class="blue">Discrete Structures</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td class="italic">CC-INTCOM11 </td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>PE 102</td>
+                    <td> Fitness Exercises</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td class="italic"> PE 101</td>
+                </tr>
+
+                <tr>
+                    <td> </td>
+
+                    <td>NSTP 102</td>
+                    <td> Nat'l Service Training Program 1</td>
+                    <td>2</td>
+                    <td> </td>
+                    <td>2</td>
+                    <td class="italic"> NSTP 101</td>
+                </tr>
+                <tr>
+                    <td colspan="9" class="green-three">Total <span class="total-2"></span> 26</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!--Second Year-->
+    <p class="capt second">II-Second Year</p>
+    <div class="row-1-tables">
+
+        <div class="table-1 table">
+
+            <table>
+
+                <tr class="orange-three">
+                    <th rowspan="2" class="orange-two">3</th>
+                    <th class="vertical" rowspan="2">Grade</th>
+                    <th rowspan="2">Course Code</th>
+                    <th rowspan="2">Descriptive Title</th>
+                    <th colspan="3">Units</th>
+                    <th rowspan="2">Pre-Requisite/Remarks</th>
+                </tr>
+                <tr>
+                    <td>lec</td>
+                    <td>lab</td>
+                    <td>total </td>
+
+                </tr>
+                <tr>
+                    <td rowspan="10" class="vertical orange-one">1st Semester </td>
+                    <td></td>
+
+                    <td> SOCIO 101 </td>
+                    <td class="green"> The Contemporary World</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td></td>
+
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>RIZAL 101</td>
+                    <td class=" long  green"> Life, Works & Writings of Dr. Jose Riza</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td> CC-DIGILOG21 </td>
+                    <td class="blue"> Digital Logic Design</td>
+                    <td>2</td>
+                    <td> 1</td>
+                    <td>3</td>
+                    <td class="long italic">CC-DISCRET12</td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td> CC-DASTRUC21 </td>
+                    <td class="long red"> Data Structures & Algorithms</td>
+                    <td>2</td>
+                    <td> 1</td>
+                    <td>3</td>
+                    <td class="long italic">CC-COMPROG12 </td>
+                </tr>
+
+                <tr>
+                    <td> </td>
+
+                    <td> IT-OOPROG21</td>
+                    <td class="long blue"> Object Oriented Programming</td>
+                    <td>2</td>
+                    <td> 1</td>
+                    <td>3</td>
+                    <td class="long italic">CC-COMPROG12 </td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td> CC-ACCTG21</td>
+                    <td class="blue">Accounting for IT</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td class="long italic">MATH 101 </td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>CC-TWRITE21</td>
+                    <td class="long blue"> Tech. Writing & Presentation Skills in IT</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td class="long italic">ENGL 101, CC-INTCOM11 </td>
+                </tr>
+
+                <tr>
+                    <td> </td>
+
+                    <td>PE 103</td>
+                    <td class="long "> Phys. Activity Towards Health & Fitness 1</td>
+                    <td>2</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td class="italic"> PE 102 </td>
+                </tr>
+                <tr>
+                    <td colspan="9 " class="orange-three">Total <span class="total-3 "></span> 26</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="table-2 table ">
+            <table>
+
+                <tr class="orange-three ">
+                    <th rowspan="2 " class="orange-two ">4</th>
+                    <th class="vertical " rowspan="2 ">Grade</th>
+                    <th rowspan="2 ">Course Code</th>
+                    <th rowspan="2 ">Descriptive Title</th>
+                    <th colspan="3 ">Units</th>
+                    <th rowspan="2 ">Pre-Requisite/Remarks</th>
+                </tr>
+                <tr>
+                    <td>lec</td>
+                    <td>lab</td>
+                    <td>total </td>
+
+                </tr>
+                <tr>
+                    <td rowspan="10 " class="vertical orange-one">2nd Semester </td>
+                    <td></td>
+
+                    <td> STS 101 </td>
+                    <td class="green"> Science, Technology & Society</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td></td>
+
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>PHILO 101</td>
+                    <td class="green"> Ethics</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>CC-QUAMETH22 </td>
+                    <td class="blue">Quantitative Methods w/ Prob. Stat</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td class="italic">CC-DISCRET12</td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td> IT-PLATECH22 </td>
+                    <td class="blue">Platform Technologies w/ Op. Sys.</td>
+                    <td>2</td>
+                    <td> 1</td>
+                    <td>3</td>
+                    <td class="italic"> CC-DIGILOG21</td>
+                </tr>
+
+                <tr>
+                    <td> </td>
+
+                    <td>CC-APPSDEV22</td>
+                    <td class="red"> Applications Dev't & Emerging Tech.</td>
+                    <td>2</td>
+                    <td> 1</td>
+                    <td>3</td>
+                    <td class="long italic">CC-DASTRUC21 </td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>CC-DATACOM22</td>
+                    <td class="blue">Data Communications</td>
+                    <td>2</td>
+                    <td> 1</td>
+                    <td>3</td>
+                    <td class="italic">CC-DIGILOG21 </td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>IT-SAD22</td>
+                    <td class="blue">System Analysis & Design</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td class="italic"> IT-OOPROG2 </td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>PE 104</td>
+                    <td class="long ">Phys. Activity Towards Health & Fitness 2</td>
+                    <td>2</td>
+                    <td> </td>
+                    <td>2</td>
+                    <td class="italic">PE 103 </td>
+                </tr>
+
+                <tr>
+                    <td colspan="9 " class="orange-three">Total <span class="total-4 "></span> 26</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <p class="text " style="text-align: center; ">At the end of Second Year, the student earns a 2-Year degree on Associate in Computer Technology (ACT) as per CMO #05 s. 1998</p>
+    <!--Third Year-->
+    <p class="capt third">III-Third Year</p>
+    <div class="row-1-tables ">
+
+        <div class="table-1 table ">
+
+            <table>
+
+                <tr class="violet-three">
+                    <th rowspan="2" class="violet-two">5</th>
+                    <th class="vertical " rowspan="2 ">Grade</th>
+                    <th rowspan="2 ">Course Code</th>
+                    <th rowspan="2 ">Descriptive Title</th>
+                    <th colspan="3 ">Units</th>
+                    <th rowspan="2 ">Pre-Requisite/Remarks</th>
+                </tr>
+                <tr>
+                    <td>lec</td>
+                    <td>lab</td>
+                    <td>total </td>
+
+                </tr>
+                <tr>
+                    <td rowspan="10 " class="vertical violet-one">1st Semester </td>
+                    <td></td>
+
+                    <td> IT-IMDBSYS31 </td>
+                    <td class="long red"> Information Management (DB Sys.1)</td>
+                    <td>2</td>
+                    <td> 1</td>
+                    <td>3</td>
+                    <td class="italic">CC-APPSDEV22</td>
+
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td class="long ">IT-NETWORK31</td>
+                    <td class="blue">Computer Networks</td>
+                    <td>2</td>
+                    <td> 1</td>
+                    <td>3</td>
+                    <td class="italic"> CC-DATACOM22</td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td> IT-TESTQUA31 </td>
+                    <td class="blue">Testing & Quality Assurance</td>
+                    <td>2</td>
+                    <td> 1</td>
+                    <td>3</td>
+                    <td class="italic">IT-SAD22</td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>CC-HCI31 </td>
+                    <td class="blue"> Human Computer Interaction</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td class="italic">IT-SAD22 </td>
+                </tr>
+
+                <tr>
+                    <td> </td>
+
+                    <td>CC-RESCOM31</td>
+                    <td class="long blue"> Methods of Research in Computing</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td class="long italic"> CC-TWRITE21, CC-QUAMETH22
+                    </td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>IT-EL_ _ _ _ _ _ I</td>
+                    <td>IT Elective 1</td>
+                    <td>2</td>
+                    <td> 1</td>
+                    <td>3</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>IT-FRE_ _ _ _ _ </td>
+                    <td>Free Elective 1</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>IT-FRE_ _ _ _ _ </td>
+                    <td>Free Elective 2</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td> </td>
+                </tr>
+
+                <tr>
+                    <td colspan="9 " class="violet-three">Total <span class="total-5 "></span> 26</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="table-2 table ">
+
+            <table>
+
+                <tr class="violet-three">
+                    <th rowspan="2 " class="violet-two">6</th>
+                    <th class="vertical " rowspan="2 ">Grade</th>
+                    <th rowspan="2 ">Course Code</th>
+                    <th rowspan="2 ">Descriptive Title</th>
+                    <th colspan="3 ">Units</th>
+                    <th rowspan="2 ">Pre-Requisite/Remarks</th>
+                </tr>
+                <tr>
+                    <td>lec</td>
+                    <td>lab</td>
+                    <td>total </td>
+
+                </tr>
+                <tr>
+                    <td rowspan="10 " class="vertical violet-one ">2nd Semester </td>
+                    <td></td>
+
+                    <td> IT-IMDBSYS32 </td>
+                    <td class="blue long"> Information Management (DB Sys. 2)</td>
+                    <td>2</td>
+                    <td> 1</td>
+                    <td>3</td>
+                    <td class="italic">IT-IMDBSYS31</td>
+
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>IT-INFOSEC32</td>
+                    <td class="blue long"> Information Assurance & Security</td>
+                    <td>2</td>
+                    <td> 1</td>
+                    <td>3</td>
+                    <td class="italic">IT-IMDBSYS31 </td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td> IT-SYSARCH32 </td>
+                    <td class="blue long"> System Integration & Architecture</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td class="italic">IT-TESTQUA31, CC-HCI31</td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td> CC-TECHNO32 </td>
+                    <td class="blue"> Technopreneurship</td>
+                    <td>2</td>
+                    <td> 1</td>
+                    <td>3</td>
+                    <td class="italic">CC-RESCOM3 </td>
+                </tr>
+
+                <tr>
+                    <td> </td>
+
+                    <td>IT-INTPROG32</td>
+                    <td class="blue long"> Integrative Prog'g & Technologies</td>
+                    <td>2</td>
+                    <td>1 </td>
+                    <td>3</td>
+                    <td class="italic"> IT-IMDBSYS31</td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>IT-SYSADMN32</td>
+                    <td class="blue long">Systems Administration & Maintenance</td>
+                    <td>2</td>
+                    <td> 1</td>
+                    <td>3</td>
+                    <td class="italic">IT-NETWORK31 </td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>IT-EL_ _ _ _ _ _ </td>
+                    <td>IT Elective 2</td>
+                    <td>2</td>
+                    <td> 1</td>
+                    <td>3</td>
+                    <td class="italic">IT-NETWORK31 </td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>IT-FRE_ _ _ _ _ </td>
+                    <td>Free Elective 3</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td> </td>
+                </tr>
+
+                <tr>
+                    <td colspan="9 " class="violet-three">Total <span class="total-6 "></span> 26</td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+    <!--Summer-->
+    <p class="capt-summer ">Summer</p>
+    <div class="row-1-tables ">
+        <div class="table-1 table ">
+
+            <table class="single-row ">
+
+                <tr class="grey-one">
+                    <th rowspan="2 " class="grey-two"></th>
+                    <th class="vertical " rowspan="2 ">Grade</th>
+                    <th rowspan="2 ">Course Code</th>
+                    <th rowspan="2 ">Descriptive Title</th>
+                    <th colspan="3 ">Units</th>
+                    <th rowspan="2 ">Pre-Requisite/Remarks</th>
+                </tr>
+                <tr>
+                    <td>lec</td>
+                    <td>lab</td>
+                    <td>total </td>
+
+                </tr>
+                <tr>
+                    <td rowspan="3 " class="vertical grey-one">Summer </td>
+                    <td></td>
+
+                    <td> IT-CPSTONE30 </td>
+                    <td class="blue"> Capstone Project 1</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td class="red">***</td>
+
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>CC-PROFIS10</td>
+                    <td class="blue"> Professional Issues in Computing</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td class="red"> **</td>
+                </tr>
+
+                <td colspan="9 " class="grey-three">Total <span class="total-7 "></span> 26</td>
+                </tr>
+            </table>
+        </div>
+        <div class="text">
+            <p class="text-summer"><span class="red">**</span>must finish all 1st year to 2nd year courses</p>
+            <p class="text-summer"><span class="red">***</span>must finish all 1st year to 3rd year courses</p>
+            <p class="text-summer"><span class="red">****</span>must finish all academic courses and must be taken solely in a semester</p>
+        </div>
+    </div>
+    <!--Fourth Year-->
+    <p class="capt fourth ">IV-Fourth Year</p>
+    <div class="row-1-tables ">
+
+        <div class="table-1 table ">
+
+            <table>
+
+                <tr class="blue-two">
+                    <th rowspan="2 " class="blue-one">7</th>
+                    <th class="vertical " rowspan="2 ">Grade</th>
+                    <th rowspan="2 ">Course Code</th>
+                    <th rowspan="2 ">Descriptive Title</th>
+                    <th colspan="3 ">Units</th>
+                    <th rowspan="2 ">Pre-Requisite/Remarks</th>
+                </tr>
+                <tr>
+                    <td>lec</td>
+                    <td>lab</td>
+                    <td>total </td>
+
+                </tr>
+                <tr>
+                    <td rowspan="10 " class="vertical blue-two">1st Semester </td>
+                    <td></td>
+
+                    <td> LIT 11 </td>
+                    <td class="green">Literatures of the World</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td></td>
+
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>IT-CPSTONE40</td>
+                    <td class="blue">Capstone Project 2</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td class="italic">IT-CPSTONE30 </td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td> IT-EL_ _ _ _ _ _ </td>
+                    <td> _ IT Elective 3</td>
+                    <td>2</td>
+                    <td> 1</td>
+                    <td>3</td>
+                    <td>
+                        <div class="circle"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td> IT-EL_ _ _ _ _ _ </td>
+                    <td> IT Elective 4</td>
+                    <td>2</td>
+                    <td> 1</td>
+                    <td>3</td>
+                    <td>
+                        <div class="circle"></div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> </td>
+
+                    <td> IT-FRE_ _ _ _ _ </td>
+                    <td> Free Elective 4</td>
+                    <td>3</td>
+                    <td> </td>
+                    <td>3</td>
+                    <td>
+                        <div class="circle circle-one">
+
+                        </div>
+                        <div class="circle circle-one "></div>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="9 " class="blue-three">Total <span class="total-8 "></span> 26</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="table-2 table ">
+
+            <table>
+
+                <tr class="blue-two">
+                    <th rowspan="2 " class="blue-one">8</th>
+                    <th class="vertical " rowspan="2 ">Grade</th>
+                    <th rowspan="2 ">Course Code</th>
+                    <th rowspan="2 ">Descriptive Title</th>
+                    <th colspan="3 ">Units</th>
+                    <th rowspan="2 ">Pre-Requisite/Remarks</th>
+                </tr>
+                <tr>
+                    <td>lec</td>
+                    <td>lab</td>
+                    <td>total </td>
+
+                </tr>
+                <tr>
+                    <td rowspan="10 " class="vertical blue-two">2nd Semester </td>
+                    <td></td>
+
+                    <td> CC-PRACT40 </td>
+                    <td class="blue">Practicum</td>
+                    <td></td>
+                    <td>9</td>
+                    <td>9</td>
+                    <td class="red">****</td>
+
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>.</td>
+                    <td>. </td>
+                    <td>.</td>
+                    <td>. </td>
+                    <td>.</td>
+                    <td> .</td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>.</td>
+                    <td>. </td>
+                    <td>.</td>
+                    <td>. </td>
+                    <td>.</td>
+                    <td> .</td>
+                </tr>
+                <tr>
+                    <td> </td>
+
+                    <td>.</td>
+                    <td>. </td>
+                    <td>.</td>
+                    <td>. </td>
+                    <td>.</td>
+                    <td> .</td>
+                </tr>
+
+                <tr>
+                    <td> </td>
+
+                    <td>.</td>
+                    <td>. </td>
+                    <td>.</td>
+                    <td>. </td>
+                    <td>.</td>
+                    <td> .</td>
+                </tr>
+
+
+
+                <tr>
+                    <td colspan="9 " class="blue-three">Total <span class="total-9 "></span> 26</td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+    <!--Last Remaining Prospectus-->
+    <div class="last-row ">
+        <div class="elective-courses last ">
+            <table class="last-table ">
+                <tr class="grey">
+                    <th colspan="2 ">
+                        <div class="circle circle-one"></div>IT ELECTIVE COURSES:</th>
+                    <th>units</th>
+                    <th>PRE-REQUISITE</th>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name=" " id="check">____ELPHP1</td>
+                    <td class="left ">PHP Programming Module 1</td>
+                    <td class="left ">3</td>
+                    <td class="left italic">IT-IMDBSYS31</td>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name=" " id="check">____ELPHP2</td>
+                    <td class="left ">PHP Programming Module 2</td>
+                    <td class="left ">3</td>
+                    <td class="left italic">ELPHP</td>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name=" " id="check">____ELDNET1</td>
+                    <td class="left ">.NET Programming Module 1</td>
+                    <td class="left ">3</td>
+                    <td class="left italic">CC-APPSDEV22</td>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name=" " id="check">____ELDNET2</td>
+                    <td class="left ">.NET Programming Module 2</td>
+                    <td class="left ">3</td>
+                    <td class="left italic">ELDNET1</td>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name=" " id="check">____ELDROID1</td>
+                    <td class="left ">ANDROID Programming Module 1</td>
+                    <td class="left ">3</td>
+                    <td class="left italic">CC-APPSDEV22</td>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name=" " id="check">____ELDROID2</td>
+                    <td class="left ">ANDROID Programming Module 2 </td>
+                    <td class="left ">3</td>
+                    <td class="left italic">IT-PLATECH22</td>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name=" " id="check">____ELEMSYS </td>
+                    <td class="left ">Embedded Systems & IoT</td>
+                    <td class="left ">3</td>
+                    <td class="left italic">IT-INTPROG32</td>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name=" " id="check">____ELAI </td>
+                    <td class="left ">Introduction to Artificial Intelligence</td>
+                    <td class="left ">3</td>
+                    <td class="left italic">IT-IMDBSYS31</td>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name=" " id="check">____ELASI </td>
+                    <td class="left ">ASI-UC Jumpstart Program</td>
+                    <td class="left ">3</td>
+                    <td class="left red ">***</td>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name="" id="check">____ELIBM1</td>
+                    <td class="left ">IBM-UC Integration Course 1</td>
+                    <td class="left ">3</td>
+                    <td class="left red ">**</td>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name=" " id="check">____ELIBM2 </td>
+                    <td class="left ">IBM-UC Integration Course 2</td>
+                    <td class="left ">3</td>
+                    <td class="left italic">ELIBM1</td>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name=" " id="check">____ELIBM3 </td>
+                    <td class="left ">IBM-UC Integration Course 3</td>
+                    <td class="left ">3</td>
+                    <td class="left italic">ELIBM2</td>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name=" " id="check">____ELIBM4 </td>
+                    <td class="left ">IBM-UC Integration Course 4</td>
+                    <td class="left ">3</td>
+                    <td class="left italic">ELIBM3</td>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name=" " id="check">____ELBIZAN1 </td>
+                    <td class="left ">Business Analytics Module 1</td>
+                    <td class="left ">3</td>
+                    <td class="left italic">IT-IMDBSYS32</td>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name=" " id="check">____ELBIZAN2 </td>
+                    <td class="left ">Business Analytics Module 2</td>
+                    <td class="left ">3</td>
+                    <td class="left italic">ELBIZAN1</td>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name=" " id="check">____ </td>
+                    <td class="left "></td>
+                    <td class="left "></td>
+                    <td class="left "></td>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name=" " id="check">____ </td>
+                    <td class="left "></td>
+                    <td class="left "></td>
+                    <td class="left "></td>
+                </tr>
+            </table>
+        </div>
+        <div class="free-elective last ">
+            <table class="last-table ">
+                <tr class="grey">
+                    <th colspan="2 ">
+                        <div class="circle circle-one">
+
+                        </div>
+                        <div class="circle circle-one "></div>FREE ELECTIVE COURSES:</th>
+                    <th>units</th>
+                    <th>PRE-REQUISITE</th>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name=" " id="check">____FREDTHINK</td>
+                    <td class="left ">Principles of Design Thinking</td>
+                    <td class="left ">3</td>
+                    <td class="left italic">CC-HCI31</td>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name=" " id="check">____FREFORLAN</td>
+                    <td class="left ">Foreign Language</td>
+                    <td class="left ">3</td>
+                    <td class="left red">**</td>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name=" " id="check">____FREIP</td>
+                    <td class="left ">Introduction to Intellectual Property</td>
+                    <td class="left ">3</td>
+                    <td class="left red">**</td>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name=" " id="check">____FRETRNDS</td>
+                    <td class="left ">Emerging Technologies in ICT</td>
+                    <td class="left ">3</td>
+                    <td class="left red">**</td>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name=" " id="check">____FRECIS</td>
+                    <td class="left ">Cloud Infrastructure Services</td>
+                    <td class="left ">3</td>
+                    <td class="left italic ">IT-IMDBSYS3</td>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name=" " id="check">____FREISM</td>
+                    <td class="left ">Information Storage Management</td>
+                    <td class="left ">3</td>
+                    <td class="left italic">IT-INFOSEC32</td>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name=" " id="check">____FREDX</td>
+                    <td class="left ">Introduction to Digital Transformation</td>
+                    <td class="left ">3</td>
+                    <td class="left italic">FREDTHINK</td>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name=" " id="check">____FRELEAN</td>
+                    <td class="left ">Lean Startup Methodology</td>
+                    <td class="left ">3</td>
+                    <td class="left italic">CC-TECHNO32</td>
+                </tr>
+                <tr>
+                    <td class="left "><input type="checkbox " name=" " id="check">____FREKYI</td>
+                    <td class="left ">Know-Your-Industry/Corporate Readiness</td>
+                    <td class="left ">3</td>
+                    <td class="left red">**</td>
+                </tr>
+            </table>
+            <table class="last-table ">
+                <tr class="grey">
+                    <th colspan="2">Summary of Courses</th>
+                </tr>
+                <tr>
+                    <td class="green left">General Education Courses</td>
+                    <td class="green left">42 units</td>
+                </tr>
+                <tr>
+                    <td class="red left">Common Computing Courses</td>
+                    <td class="red left">18 units</td>
+                </tr>
+                <tr>
+                    <td class="blue left">Professional IT Courses</td>
+                    <td class="blue left">78 units</td>
+                </tr>
+                <tr>
+                    <td class="left">IT Electives / Free Electives</td>
+                    <td class="left">24 units</td>
+                </tr>
+                <tr>
+                    <td class="left">Other Courses (PE & NSTP)</td>
+                    <td class="left">14 units</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>176 units</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <p class="name">MADE BY: BENITEZ, VANNESS A. BSIT 1C</p>
 </body>
+
 </html>
